@@ -18,7 +18,14 @@
 def key_for_min_value(name_hash)
   #new_name_hash = name_hash.collect {|key,value| <=> }.first
   #compare values
+  low_k = nil
+  low_v = nil
   name_hash.each do  |k, v|
-    require 'pry'; binding.pry
+    if low_v == nil
+      low_v = v
+      low_k = k
+      require 'pry'; binding.pry
+
+    end
   end
 end
